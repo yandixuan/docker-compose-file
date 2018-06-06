@@ -7,12 +7,13 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: "root"
-    restart: no
+    restart: "no"
     container_name: mysql
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-connect='SET NAMES utf8mb4;' --innodb-flush-log-at-trx-commit=0
     volumes:
       - "/Users/yandixuan/Applications/dockerData/mysql/data:/var/lib/mysql"
       # - "./conf:/etc/mysql/mysql.conf.d/mysqld.cnf"
+
 networks:
   default:
     external:
