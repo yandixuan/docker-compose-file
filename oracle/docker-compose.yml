@@ -1,0 +1,18 @@
+version: '2.1'
+
+services:
+  oracle:
+    image: sath89/oracle-12c
+    ports:
+      - 1521:1521
+    restart: "no"
+    container_name: oracle
+    environment: 
+      WEB_CONSOLE: "false" 
+    volumes:
+      - "/Users/yandixuan/Applications/dockerData/oracle/data:/u01/app/oracle"
+
+networks:
+  default:
+    external:
+      name: ydx
