@@ -11,10 +11,9 @@ services:
     container_name: mysql
     volumes:
       - '/Users/yandixuan/Applications/dockerData/mysql/data:/var/lib/mysql'
-      - '/Users/yandixuan/Applications/dockerData/mysql/conf:/etc/mysql/conf.d'
+      - '/Users/yandixuan/Applications/dockerData/mysql/conf/my.cnf:/etc/my.cnf'
 
 networks:
   default:
     external:
       name: ydx
-
